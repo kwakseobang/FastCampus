@@ -17,6 +17,8 @@
 		D682ACAC2B52D4F100C7E282 /* Loop.swift in Sources */ = {isa = PBXBuildFile; fileRef = D682ACAB2B52D4F100C7E282 /* Loop.swift */; };
 		D682ACAE2B52D5BF00C7E282 /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = D682ACAD2B52D5BF00C7E282 /* Function.swift */; };
 		D682ACB02B52D77C00C7E282 /* Half.swift in Sources */ = {isa = PBXBuildFile; fileRef = D682ACAF2B52D77C00C7E282 /* Half.swift */; };
+		D682ACB22B52E00B00C7E282 /* Elevator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D682ACB12B52E00B00C7E282 /* Elevator.swift */; };
+		D682ACB42B52E64000C7E282 /* Diff.swift in Sources */ = {isa = PBXBuildFile; fileRef = D682ACB32B52E64000C7E282 /* Diff.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		D682ACAB2B52D4F100C7E282 /* Loop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loop.swift; sourceTree = "<group>"; };
 		D682ACAD2B52D5BF00C7E282 /* Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Function.swift; sourceTree = "<group>"; };
 		D682ACAF2B52D77C00C7E282 /* Half.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Half.swift; sourceTree = "<group>"; };
+		D682ACB12B52E00B00C7E282 /* Elevator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elevator.swift; sourceTree = "<group>"; };
+		D682ACB32B52E64000C7E282 /* Diff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diff.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 				D682ACAB2B52D4F100C7E282 /* Loop.swift */,
 				D682ACAD2B52D5BF00C7E282 /* Function.swift */,
 				D682ACAF2B52D77C00C7E282 /* Half.swift */,
+				D682ACB12B52E00B00C7E282 /* Elevator.swift */,
+				D682ACB32B52E64000C7E282 /* Diff.swift */,
 			);
 			path = FastSwiftBasicApp;
 			sourceTree = "<group>";
@@ -161,8 +167,10 @@
 				D682ACAE2B52D5BF00C7E282 /* Function.swift in Sources */,
 				D682AC982B52CE3E00C7E282 /* FastSwiftBasicAppApp.swift in Sources */,
 				D682ACAC2B52D4F100C7E282 /* Loop.swift in Sources */,
+				D682ACB42B52E64000C7E282 /* Diff.swift in Sources */,
 				D682ACA82B52D0F500C7E282 /* MyCollections.swift in Sources */,
 				D682ACAA2B52D42100C7E282 /* Condition.swift in Sources */,
+				D682ACB22B52E00B00C7E282 /* Elevator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
