@@ -19,6 +19,12 @@
 		D682ACB02B52D77C00C7E282 /* Half.swift in Sources */ = {isa = PBXBuildFile; fileRef = D682ACAF2B52D77C00C7E282 /* Half.swift */; };
 		D682ACB22B52E00B00C7E282 /* Elevator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D682ACB12B52E00B00C7E282 /* Elevator.swift */; };
 		D682ACB42B52E64000C7E282 /* Diff.swift in Sources */ = {isa = PBXBuildFile; fileRef = D682ACB32B52E64000C7E282 /* Diff.swift */; };
+		D682ACB62B537E1400C7E282 /* ChioceEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D682ACB52B537E1400C7E282 /* ChioceEnum.swift */; };
+		D682ACB82B537FA100C7E282 /* Selction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D682ACB72B537FA100C7E282 /* Selction.swift */; };
+		D682ACBA2B53830400C7E282 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = D682ACB92B53830400C7E282 /* Sample.swift */; };
+		D682ACBC2B5389DA00C7E282 /* Exception.swift in Sources */ = {isa = PBXBuildFile; fileRef = D682ACBB2B5389DA00C7E282 /* Exception.swift */; };
+		D682ACBE2B53916700C7E282 /* MyCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D682ACBD2B53916700C7E282 /* MyCar.swift */; };
+		D682ACC02B53961600C7E282 /* MyGeneric.swift in Sources */ = {isa = PBXBuildFile; fileRef = D682ACBF2B53961600C7E282 /* MyGeneric.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +41,12 @@
 		D682ACAF2B52D77C00C7E282 /* Half.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Half.swift; sourceTree = "<group>"; };
 		D682ACB12B52E00B00C7E282 /* Elevator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elevator.swift; sourceTree = "<group>"; };
 		D682ACB32B52E64000C7E282 /* Diff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diff.swift; sourceTree = "<group>"; };
+		D682ACB52B537E1400C7E282 /* ChioceEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChioceEnum.swift; sourceTree = "<group>"; };
+		D682ACB72B537FA100C7E282 /* Selction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selction.swift; sourceTree = "<group>"; };
+		D682ACB92B53830400C7E282 /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
+		D682ACBB2B5389DA00C7E282 /* Exception.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exception.swift; sourceTree = "<group>"; };
+		D682ACBD2B53916700C7E282 /* MyCar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCar.swift; sourceTree = "<group>"; };
+		D682ACBF2B53961600C7E282 /* MyGeneric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGeneric.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +91,12 @@
 				D682ACAF2B52D77C00C7E282 /* Half.swift */,
 				D682ACB12B52E00B00C7E282 /* Elevator.swift */,
 				D682ACB32B52E64000C7E282 /* Diff.swift */,
+				D682ACB52B537E1400C7E282 /* ChioceEnum.swift */,
+				D682ACB72B537FA100C7E282 /* Selction.swift */,
+				D682ACB92B53830400C7E282 /* Sample.swift */,
+				D682ACBB2B5389DA00C7E282 /* Exception.swift */,
+				D682ACBD2B53916700C7E282 /* MyCar.swift */,
+				D682ACBF2B53961600C7E282 /* MyGeneric.swift */,
 			);
 			path = FastSwiftBasicApp;
 			sourceTree = "<group>";
@@ -163,14 +181,20 @@
 			files = (
 				D682ACB02B52D77C00C7E282 /* Half.swift in Sources */,
 				D682ACA62B52CF8800C7E282 /* VariableType.swift in Sources */,
+				D682ACBE2B53916700C7E282 /* MyCar.swift in Sources */,
 				D682AC9A2B52CE3E00C7E282 /* ContentView.swift in Sources */,
+				D682ACB62B537E1400C7E282 /* ChioceEnum.swift in Sources */,
 				D682ACAE2B52D5BF00C7E282 /* Function.swift in Sources */,
 				D682AC982B52CE3E00C7E282 /* FastSwiftBasicAppApp.swift in Sources */,
 				D682ACAC2B52D4F100C7E282 /* Loop.swift in Sources */,
 				D682ACB42B52E64000C7E282 /* Diff.swift in Sources */,
 				D682ACA82B52D0F500C7E282 /* MyCollections.swift in Sources */,
 				D682ACAA2B52D42100C7E282 /* Condition.swift in Sources */,
+				D682ACB82B537FA100C7E282 /* Selction.swift in Sources */,
+				D682ACBA2B53830400C7E282 /* Sample.swift in Sources */,
+				D682ACC02B53961600C7E282 /* MyGeneric.swift in Sources */,
 				D682ACB22B52E00B00C7E282 /* Elevator.swift in Sources */,
+				D682ACBC2B5389DA00C7E282 /* Exception.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
