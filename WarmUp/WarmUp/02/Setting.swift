@@ -43,6 +43,7 @@ struct Setting: View {
                                     .foregroundColor(item.foregroundColor)
                                     .background(item.backgroundColor)
                                     .cornerRadius(4)
+                                
                             }
                         }
                     }
