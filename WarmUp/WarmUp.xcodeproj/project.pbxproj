@@ -11,6 +11,7 @@
 		D682ACD02B539EFA00C7E282 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D682ACCF2B539EFA00C7E282 /* ContentView.swift */; };
 		D682ACD22B539EFC00C7E282 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D682ACD12B539EFC00C7E282 /* Assets.xcassets */; };
 		D682ACD52B539EFC00C7E282 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D682ACD42B539EFC00C7E282 /* Preview Assets.xcassets */; };
+		D682ACDC2B53A28900C7E282 /* SimpleVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = D682ACDB2B53A28900C7E282 /* SimpleVIew.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		D682ACCF2B539EFA00C7E282 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D682ACD12B539EFC00C7E282 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D682ACD42B539EFC00C7E282 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D682ACDB2B53A28900C7E282 /* SimpleVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleVIew.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				D682ACCD2B539EFA00C7E282 /* WarmUpApp.swift */,
 				D682ACCF2B539EFA00C7E282 /* ContentView.swift */,
+				D682ACDB2B53A28900C7E282 /* SimpleVIew.swift */,
 				D682ACD12B539EFC00C7E282 /* Assets.xcassets */,
 				D682ACD32B539EFC00C7E282 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D682ACDC2B53A28900C7E282 /* SimpleVIew.swift in Sources */,
 				D682ACD02B539EFA00C7E282 /* ContentView.swift in Sources */,
 				D682ACCE2B539EFA00C7E282 /* WarmUpApp.swift in Sources */,
 			);
