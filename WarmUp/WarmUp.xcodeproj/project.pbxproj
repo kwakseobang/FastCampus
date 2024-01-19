@@ -18,6 +18,14 @@
 		D682ACE52B53BC7A00C7E282 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D682ACE42B53BC7A00C7E282 /* Onboarding.swift */; };
 		D682ACE82B53CE3B00C7E282 /* ListLoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = D682ACE72B53CE3B00C7E282 /* ListLoop.swift */; };
 		D682ACEA2B53DEDA00C7E282 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D682ACE92B53DEDA00C7E282 /* Setting.swift */; };
+		D682ACEC2B565C3E00C7E282 /* Modal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D682ACEB2B565C3E00C7E282 /* Modal.swift */; };
+		D682ACEF2B565E5400C7E282 /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D682ACEE2B565E5400C7E282 /* Detail.swift */; };
+		D682ACF12B56634E00C7E282 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D682ACF02B56634E00C7E282 /* Navigation.swift */; };
+		D682ACF32B56764800C7E282 /* MyTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = D682ACF22B56764800C7E282 /* MyTab.swift */; };
+		D682ACF52B56788700C7E282 /* TabDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D682ACF42B56788700C7E282 /* TabDetail.swift */; };
+		D682ACF72B5684D000C7E282 /* MyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D682ACF62B5684D000C7E282 /* MyApp.swift */; };
+		D682ACFA2B568BAC00C7E282 /* FirstPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D682ACF92B568BAC00C7E282 /* FirstPage.swift */; };
+		D682ACFC2B568EAB00C7E282 /* onbordings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D682ACFB2B568EAB00C7E282 /* onbordings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +41,14 @@
 		D682ACE42B53BC7A00C7E282 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		D682ACE72B53CE3B00C7E282 /* ListLoop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListLoop.swift; sourceTree = "<group>"; };
 		D682ACE92B53DEDA00C7E282 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		D682ACEB2B565C3E00C7E282 /* Modal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modal.swift; sourceTree = "<group>"; };
+		D682ACEE2B565E5400C7E282 /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
+		D682ACF02B56634E00C7E282 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		D682ACF22B56764800C7E282 /* MyTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTab.swift; sourceTree = "<group>"; };
+		D682ACF42B56788700C7E282 /* TabDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabDetail.swift; sourceTree = "<group>"; };
+		D682ACF62B5684D000C7E282 /* MyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApp.swift; sourceTree = "<group>"; };
+		D682ACF92B568BAC00C7E282 /* FirstPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPage.swift; sourceTree = "<group>"; };
+		D682ACFB2B568EAB00C7E282 /* onbordings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onbordings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +81,7 @@
 		D682ACCC2B539EFA00C7E282 /* WarmUp */ = {
 			isa = PBXGroup;
 			children = (
+				D682ACED2B565E4300C7E282 /* 03 */,
 				D682ACE62B53CE1D00C7E282 /* 02 */,
 				D682ACDF2B53ADCA00C7E282 /* 01 */,
 				D682ACCF2B539EFA00C7E282 /* ContentView.swift */,
@@ -102,6 +119,29 @@
 				D682ACE92B53DEDA00C7E282 /* Setting.swift */,
 			);
 			path = 02;
+			sourceTree = "<group>";
+		};
+		D682ACED2B565E4300C7E282 /* 03 */ = {
+			isa = PBXGroup;
+			children = (
+				D682ACF82B568B9400C7E282 /* MyApp */,
+				D682ACEB2B565C3E00C7E282 /* Modal.swift */,
+				D682ACEE2B565E5400C7E282 /* Detail.swift */,
+				D682ACF02B56634E00C7E282 /* Navigation.swift */,
+				D682ACF22B56764800C7E282 /* MyTab.swift */,
+				D682ACF42B56788700C7E282 /* TabDetail.swift */,
+			);
+			path = 03;
+			sourceTree = "<group>";
+		};
+		D682ACF82B568B9400C7E282 /* MyApp */ = {
+			isa = PBXGroup;
+			children = (
+				D682ACF62B5684D000C7E282 /* MyApp.swift */,
+				D682ACF92B568BAC00C7E282 /* FirstPage.swift */,
+				D682ACFB2B568EAB00C7E282 /* onbordings.swift */,
+			);
+			path = MyApp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,14 +215,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				D682ACE32B53B35200C7E282 /* MyText.swift in Sources */,
+				D682ACFC2B568EAB00C7E282 /* onbordings.swift in Sources */,
+				D682ACEC2B565C3E00C7E282 /* Modal.swift in Sources */,
 				D682ACDC2B53A28900C7E282 /* SimpleVIew.swift in Sources */,
+				D682ACF12B56634E00C7E282 /* Navigation.swift in Sources */,
+				D682ACF52B56788700C7E282 /* TabDetail.swift in Sources */,
 				D682ACDE2B53ADC200C7E282 /* Layout.swift in Sources */,
+				D682ACF32B56764800C7E282 /* MyTab.swift in Sources */,
 				D682ACE52B53BC7A00C7E282 /* Onboarding.swift in Sources */,
+				D682ACF72B5684D000C7E282 /* MyApp.swift in Sources */,
 				D682ACE12B53AFF700C7E282 /* MyButton.swift in Sources */,
 				D682ACD02B539EFA00C7E282 /* ContentView.swift in Sources */,
 				D682ACCE2B539EFA00C7E282 /* WarmUpApp.swift in Sources */,
 				D682ACE82B53CE3B00C7E282 /* ListLoop.swift in Sources */,
+				D682ACEF2B565E5400C7E282 /* Detail.swift in Sources */,
 				D682ACEA2B53DEDA00C7E282 /* Setting.swift in Sources */,
+				D682ACFA2B568BAC00C7E282 /* FirstPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,6 +21,7 @@ struct Fruits: Hashable{
 }
 
 struct ListLoop: View {
+    //바뀔떄마다 업데이트? 수정?
    @State var favoriteFruits = [
         Fruits(name: "Apple", matchFruitName: "Ellonb", price: 1000),
         Fruits(name: "Banana", matchFruitName: "Banana", price: 5000),

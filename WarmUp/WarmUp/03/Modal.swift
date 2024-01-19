@@ -22,6 +22,7 @@ struct Modal: View {
         }
         .sheet(isPresented: $showModal) {
             Detail(isPresented: $showModal) // 스테이트 변수를 디테일 뷰의 바인딩 변수와 엮어줌
+            
         }
     }
 }
