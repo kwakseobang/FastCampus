@@ -10,25 +10,29 @@ import SwiftUI
 struct OnboardingView: View {
     @StateObject private var pathModel = PathModel()
     @StateObject private var onboardingViewModel = OnboardingViewModel()
+    @StateObject private var todoListViewModel = TodoListViewModel()
     var body: some View {
         NavigationStack(path:$pathModel.paths){
-            OnboardingContentView(onboardingViewModel: onboardingViewModel)
+//            OnboardingContentView(onboardingViewModel: onboardingViewModel)
+            TodoListView()
+                .environmentObject(todoListViewModel)
                 .navigationDestination(for: PathType.self) { pathType in
                     switch pathType {
                     case .homeView:
                         HomeView()
                             .navigationBarBackButtonHidden()
                     case .todoView:
-                        TodoView()
-                            .navigationBarBackButtonHidden()
+                        Text("Todo")
+//                        TodoView()
+//                            .navigationBarBackButtonHidden()
                     case .memoView:
-                        MemoView()
-                            .navigationBarBackButtonHidden()
+                        Text("memo")
+//                        MemoView()
+//                            .navigationBarBackButtonHidden()
                     }
                 }
         }
         .environmentObject(pathModel) //전역적으로 사용
-        
     }
 }
 // MARK: - 온보딩 컨텐츠 뷰
@@ -67,11 +71,11 @@ private struct OnboardingCellListView: View {
             }
         }
         .tabViewStyle(.page(indexDisplayMode: .never))
-        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.5) //전체적으로 꽉 차게 높이는 2/3
+        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.3) //전체적으로 꽉 차게 높이는 2/3
         .background(
-            selectedIndex % 2 == 0
-            ? Color.customSky
-            : Color.customBackgroundGreen
+            selectedIndex % 2 != 0
+            ? Color.ctSky
+            : Color.ctBackgroundGreen
         )
         .clipped() // 탭 뷰를 구성할 때 짤리는 부분 절삭
     }
@@ -104,7 +108,7 @@ private struct OnboardingCellView: View {
                 }
                 Spacer()
             }
-            .background(Color.customWhite)
+            .background(Color.ctWhite)
             .cornerRadius(0)
         }
         .shadow(radius: 10)
@@ -121,10 +125,10 @@ private struct StartBtnView: View {
             HStack{
                 Text("시작하기")
                     .font(.system(size: 16,weight: .medium))
-                    .foregroundColor(Color.customGreen)
+                    .foregroundColor(Color.ctGreen)
                 Image("arrow")
                     .renderingMode(.template)
-                    .foregroundColor(Color.customGreen)
+                    .foregroundColor(Color.ctGreen)
             }
         }
         .padding(.bottom,50)
