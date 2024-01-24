@@ -11,24 +11,33 @@ struct OnboardingView: View {
     @StateObject private var pathModel = PathModel()
     @StateObject private var onboardingViewModel = OnboardingViewModel()
     @StateObject private var todoListViewModel = TodoListViewModel()
+    @StateObject private var memoListViewModel = MemoListViewModel()
     var body: some View {
         NavigationStack(path:$pathModel.paths){
 //            OnboardingContentView(onboardingViewModel: onboardingViewModel)
-            TodoListView()
-                .environmentObject(todoListViewModel)
+//            TodoListView()
+            MemoListView()
+                .environmentObject(memoListViewModel)
                 .navigationDestination(for: PathType.self) { pathType in
                     switch pathType {
                     case .homeView:
                         HomeView()
                             .navigationBarBackButtonHidden()
                     case .todoView:
-                        Text("Todo")
-//                        TodoView()
-//                            .navigationBarBackButtonHidden()
-                    case .memoView:
-                        Text("memo")
-//                        MemoView()
-//                            .navigationBarBackButtonHidden()
+                        TodoView()
+                            .environmentObject(todoListViewModel)
+                            .navigationBarBackButtonHidden()
+                    case let  .memoView(isCreateMode,memo):
+                        MemoView(
+                            memoViewModel: isCreateMode
+                            ? .init(memo: .init(title: "", content: "", date: .now))
+                            : .init(memo: memo ?? .init(title: "", content: "", date: .now)),
+                            isCreateMode:  isCreateMode
+                        )
+                       
+//                        MemoView() // 하나는 생성모드 하나는 뷰어 에서 수정 파라미터로 넘겨준다.
+                            .navigationBarBackButtonHidden()
+                            .environmentObject(memoListViewModel)
                     }
                 }
         }

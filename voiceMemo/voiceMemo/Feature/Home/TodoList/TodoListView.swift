@@ -28,7 +28,7 @@ struct TodoListView: View {
                         .frame(height: 30)
                 }
                 TitleView()
-                    .padding(.top,50)
+                    .padding(.top,40)
                 if todoListViewModel.todos.isEmpty{
                     AnnouncmentView()
                         
@@ -41,6 +41,16 @@ struct TodoListView: View {
                 .padding(.trailing,30)
                 .padding(.bottom,50)
         }
+        .alert(
+             "To do list \(todoListViewModel.removeTodosCount)개 삭제하시겠습니까?",
+             isPresented: $todoListViewModel.isDisplayRemoveTodoAlert  //true일 시 작동
+           ) {
+             Button("삭제", role: .destructive) {
+               todoListViewModel.removeBtnTapped() // 삭제
+             }
+             Button("취소", role: .cancel) { }
+           }
+    
     }
 }
 //MARK: - TodoList 타이틀 뷰
@@ -65,6 +75,7 @@ private struct AnnouncmentView: View {
     fileprivate var body: some View {
         VStack(spacing:15){
             Spacer()
+                .frame(height: 100)
             Image("pencil")
                 .renderingMode(.template)
             Text("매일 아침 8시 운동하자!")
@@ -72,7 +83,7 @@ private struct AnnouncmentView: View {
             Text("1시 반 점심약속 리마인드 해보자!")
             Spacer()
         }
-        .font(.system(size: 16))
+        .font(.system(size: 18))
         .foregroundColor(.customGray2)
     }
 }
@@ -89,19 +100,21 @@ private struct TodoListContentView: View {
             }
             //수직
             ScrollView(.vertical){
-                VStack(spacing: 0){
+                VStack(spacing: 15){
                     Rectangle()
                         .fill(Color.customGray0) //구분선 색
                         .frame(height: 1)
                     ForEach(todoListViewModel.todos,id: \.self){ todo in
                         //TODO: - Todo 셀 뷰 todo 넣어서 뷰 호출하기
                         TodoListCelltView(todo: todo)
-                        
+                
                     }
+                    
                 }
             }
         }
     }
+    
 //MARK: - Todo cell 뷰
     private struct TodoListCelltView: View {
         @EnvironmentObject private var todoListViewModel:TodoListViewModel
@@ -128,6 +141,7 @@ private struct TodoListContentView: View {
                         Text(todo.title)
                             .font(.system(size: 16))
                             .foregroundColor(todo.selected ? .customIconGray : .customBlack)
+                            .strikethrough(todo.selected) // true일시 밑줄
                         
                         Text(todo.convertedDayAndTime)
                             .font(.system(size: 16))
@@ -147,6 +161,10 @@ private struct TodoListContentView: View {
             }
             .padding(.horizontal,20)
             .padding(.top,10)
+            
+            Rectangle()
+                .fill(Color.customGray0) //구분선 색
+                .frame(height: 1)
         }
     }
 }
