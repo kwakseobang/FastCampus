@@ -10,6 +10,7 @@ import SwiftUI
 struct MemoListView: View {
     @EnvironmentObject private var pathModel : PathModel
     @EnvironmentObject private var memoListViewModel: MemoListViewModel // memoView에서도 뷰 모델의 상태를 공유하고 전역적으로 사용
+    @EnvironmentObject private var homeViewModel: HomeViewModel
     var body: some View {
         ZStack {
             VStack{
@@ -50,6 +51,11 @@ struct MemoListView: View {
             }
             Button("취소", role: .cancel) { }
           }
+        // todos가 하나하나 들어오고 값이 변경될때마다 onChange 메서드 호출 todos로 받아와서 todos.count로 개수 설정
+          .onChange(of: memoListViewModel.memos) { memos, _ in
+              homeViewModel.setMemosCount(memos.count)
+               
+           }
     }
 }
 

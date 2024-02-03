@@ -10,9 +10,11 @@ import SwiftUI
 struct TodoListView: View {
     @EnvironmentObject private var pathModel: PathModel //todoview를 불러와야돼
     @EnvironmentObject private var todoListViewModel: TodoListViewModel
+    @EnvironmentObject private var homeViewModel: HomeViewModel
     var body: some View {
-        ZStack{
             //todo cell list
+        WriteBtnView(  // 새로운 뷰 생성
+            content: {
             VStack{
                 if !todoListViewModel.todos.isEmpty {
                     CustomNavigationBar(
@@ -31,16 +33,46 @@ struct TodoListView: View {
                     .padding(.top,40)
                 if todoListViewModel.todos.isEmpty{
                     AnnouncmentView()
-                        
+                    
                 }else{
                     TodoListContentView()
                         .padding(.top,20)
                 }
             }
-            WriteTodoBtnView()
-                .padding(.trailing,30)
-                .padding(.bottom,50)
+        }, 
+        action: {
+            pathModel.paths.append(.todoView)
         }
+    )
+    
+//            VStack{
+//                if !todoListViewModel.todos.isEmpty {
+//                    CustomNavigationBar(
+//                        isDisplayLeftBtn: false,
+//                        rightBtnAction: {
+//                            todoListViewModel.navigationRightBtnTapped()
+//                        },
+//                        rightBtnType: todoListViewModel.navigationBarRigthBtnMode
+//                    )
+//                    
+//                }else { // todoList가 비어있을 경우
+//                    Spacer()
+//                        .frame(height: 30)
+//                }
+//                TitleView()
+//                    .padding(.top,40)
+//                if todoListViewModel.todos.isEmpty{
+//                    AnnouncmentView()
+//                        
+//                }else{
+//                    TodoListContentView()
+//                        .padding(.top,20)
+//                }
+//        }
+////        .modifier(WriteBtnViewModifier(action:{ pathModel.paths.append(.todoView)})) //방법 1
+//            .writeBtn {
+//                pathModel.paths.append(.todoView)  //방법 2 뷰 확장 
+//            }
         .alert(
              "To do list \(todoListViewModel.removeTodosCount)개 삭제하시겠습니까?",
              isPresented: $todoListViewModel.isDisplayRemoveTodoAlert  //true일 시 작동
@@ -49,6 +81,11 @@ struct TodoListView: View {
                todoListViewModel.removeBtnTapped() // 삭제
              }
              Button("취소", role: .cancel) { }
+           }
+        // todos가 하나하나 들어오고 값이 변경될때마다 onChange 메서드 호출 todos로 받아와서 todos.count로 개수 설정
+           .onChange(of: todoListViewModel.todos) { todos, _ in
+               homeViewModel.setTodosCount(todos.count)
+               
            }
     
     }

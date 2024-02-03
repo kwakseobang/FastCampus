@@ -131,7 +131,7 @@ private struct SelectDayView: View {
                     .frame(maxWidth: .infinity, alignment: .center)
                     .padding()
                     //todoViewModel.day 값이 변경될떄마다 어떤 로직을 수행할 지 결정
-                    .onChange(of: todoViewModel.day) {  a,v in
+                    .onChange(of: todoViewModel.day) { 
                         todoViewModel.isDisplayCalender = false // 날짜 선택 시 닫힘
                     }
                 }
